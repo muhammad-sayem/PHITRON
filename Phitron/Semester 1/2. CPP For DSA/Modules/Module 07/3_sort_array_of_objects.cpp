@@ -29,14 +29,11 @@ int main()
         }
     }
 
-
     for(i=0; i<3; i++){       
         cout << "Name: " << a[i].name << endl;
         cout << "Roll: " << a[i].roll << endl;
         cout << "Marks: " << a[i].marks << endl << endl;
     }
-
-
-    
+ 
     return 0;
 }
