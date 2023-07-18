@@ -10,11 +10,11 @@ void insertHeap(vector<int> &v, int x){
         
             int parent_ind = (cur_ind-1)/2;
 
-            if(v[parent_ind] >= v[cur_ind]){
+            if(v[parent_ind] <= v[cur_ind]){
                 break;
             }
 
-            else if(v[parent_ind] < v[cur_ind]){        // child index er value boro holei swap hoy //
+            else if(v[parent_ind] > v[cur_ind]){        // child index er value boro holei swap hoy //
                 swap(v[parent_ind], v[cur_ind]);
             }
             cur_ind = parent_ind;
@@ -45,11 +45,11 @@ void deleteHeap(vector<int> &v){
         if(left_ind <= last_ind && right_ind <= last_ind){
             // duitai ase //
 
-            if(v[left_ind] >= v[right_ind] && v[left_ind] > v[cur_ind]){
+            if(v[left_ind] <= v[right_ind] && v[left_ind] < v[cur_ind]){
                 swap(v[left_ind], v[cur_ind]);
                 cur_ind = left_ind;
             }
-            else if(v[right_ind] >= v[left_ind] && v[right_ind] > v[cur_ind]){
+            else if(v[right_ind] <= v[left_ind] && v[right_ind] < v[cur_ind]){
                 swap(v[right_ind], v[cur_ind]);
                 cur_ind = right_ind;
             }
@@ -61,7 +61,7 @@ void deleteHeap(vector<int> &v){
         else if(left_ind <= last_ind){
             // left ase //
 
-            if(v[left_ind] > v[cur_ind]){
+            if(v[left_ind] < v[cur_ind]){
                 swap(v[left_ind], v[cur_ind]);
                 cur_ind = left_ind;
             }
@@ -73,7 +73,7 @@ void deleteHeap(vector<int> &v){
         else if(right_ind <= last_ind){
             // right ase //
 
-            if(v[right_ind] > v[cur_ind]){
+            if(v[right_ind] < v[cur_ind]){
                 swap(v[right_ind], v[cur_ind]);
                 cur_ind = right_ind;
             }

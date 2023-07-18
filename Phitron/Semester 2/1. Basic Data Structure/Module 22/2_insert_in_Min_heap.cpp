@@ -30,7 +30,7 @@ int main()
             cur_ind = parent_ind;
 
             /*
-            if(v[parent_ind] < v[cur_ind]){
+            if(v[parent_ind] > v[cur_ind]){
                 swap(v[parent_ind], v[cur_ind]);
             }
             else{
