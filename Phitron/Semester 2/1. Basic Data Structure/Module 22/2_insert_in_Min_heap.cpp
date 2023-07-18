@@ -23,7 +23,7 @@ int main()
                 break;
             }
 
-            else{
+            else if(v[parent_ind] > v[cur_ind]){
                 swap(v[parent_ind], v[cur_ind]);
             }
             cur_ind = parent_ind;

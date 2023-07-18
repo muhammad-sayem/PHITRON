@@ -23,7 +23,7 @@ int main()
                 break;
             }
 
-            else{
+            else if(v[parent_ind] < v[cur_ind]){
                 swap(v[parent_ind], v[cur_ind]);
             }
             cur_ind = parent_ind;
@@ -41,7 +41,7 @@ int main()
     }
 
     for(int val: v){
-        cout << val << " ";         // 55 50 45 30 40 42 32 25 20 10 35 //
+        cout << val << " ";         
     }
 
     return 0;
