@@ -23,7 +23,7 @@ int main()
                 break;
             }
 
-            else if(v[parent_ind] < v[cur_ind]){
+            else if(v[parent_ind] < v[cur_ind]){        // child index er value boro holei swap hoy //
                 swap(v[parent_ind], v[cur_ind]);
             }
             cur_ind = parent_ind;

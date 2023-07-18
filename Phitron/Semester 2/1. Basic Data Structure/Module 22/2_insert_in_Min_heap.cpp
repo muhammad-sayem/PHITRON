@@ -19,11 +19,11 @@ int main()
         
             int parent_ind = (cur_ind-1)/2;
 
-            if(v[parent_ind] <= v[cur_ind]){
+            if(v[parent_ind] <= v[cur_ind]){        
                 break;
             }
 
-            else if(v[parent_ind] > v[cur_ind]){
+            else if(v[parent_ind] > v[cur_ind]){        // child index er value choto holei swap hoy //
                 swap(v[parent_ind], v[cur_ind]);
             }
             cur_ind = parent_ind;
