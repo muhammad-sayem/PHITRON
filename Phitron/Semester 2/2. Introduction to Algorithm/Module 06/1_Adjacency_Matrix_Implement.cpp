@@ -42,7 +42,7 @@ int adjmat[N][N];
 
 int main()
 {
-    int n, m, w, i, j;            // number of nodes (n), number of edges (m), wights (w) //
+    int n, m, i, j;            // number of nodes (n), number of edges (m), wights (w) //
     cin >> n >> m;
 
     while(m--){         // m porjonto cholbe //
