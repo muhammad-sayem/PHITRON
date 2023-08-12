@@ -45,6 +45,7 @@ int main()
         }
     }
 
+
     if(isCycle){
         cout << "Cycle Detected" << endl;
     }
