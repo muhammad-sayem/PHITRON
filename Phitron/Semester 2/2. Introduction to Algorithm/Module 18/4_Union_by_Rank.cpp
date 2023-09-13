@@ -2,12 +2,12 @@
 using namespace std;
 
 int parent[1000];
-int parentSize[1000];
+int parentLevel[1000];
 
 void dsu_set(int n){
     for(int i=1; i<=n; i++){
         parent[i] = -1;
-        parentSize[i] = 1;
+        parentLevel[i] = 1;
     }
 }
 
@@ -24,16 +24,19 @@ void dsu_union(int a, int b){
 
     if(leaderA != leaderB){
 
-        if(parentSize[leaderA] > parentSize[leaderB]){
+        if(parentLevel[leaderA] > parentLevel[leaderB]){
             // A leader hoise // 
             parent[leaderB] = leaderA; 
-            parentSize[leaderA] += parentSize[leaderB];
         }
 
-        else{
+        else if(parentLevel[leaderB] > parentLevel[leaderA]){
             // B leader hoise // 
             parent[leaderA] = leaderB; 
-            parentSize[leaderB] += parentSize[leaderA];
+        }
+        else{
+            // Jekono ekta ke Leader korlei hoy //
+            parent[leaderB] = leaderA; 
+            parentLevel[leaderA]++;     // leaderB ke leader banaile parentLevel[leaderB]++; dite hoito //
         }
 
     }
@@ -51,7 +54,7 @@ int main()
 
         dsu_union(a, b);
     }
-    cout << findLeader(4) << endl;
+    cout << findLeader(6) << endl;
     
     return 0;
 }
@@ -64,6 +67,5 @@ int main()
    karon ei duitar complexity onek valo. Noraml union er complexty er chaite //
 
 */
-
 
 
