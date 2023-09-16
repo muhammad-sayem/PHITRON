@@ -16,6 +16,5 @@ int main()
 
     cout << a[n] << endl;
 
-    
     return 0;
 }
