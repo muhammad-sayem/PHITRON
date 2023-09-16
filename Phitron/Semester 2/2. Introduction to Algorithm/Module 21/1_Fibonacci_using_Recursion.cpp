@@ -21,3 +21,6 @@ int main()
     
     return 0;
 }
+
+// Time Complexity: O(2^n) //
+// Highest range 20 porjonto kora jay //
