@@ -44,6 +44,8 @@ int main()
         }
     }
 
+    // Printing dp array //
+
     // for(i=0; i<=n; i++){
     //     for(j=0; j<=s; j++){
     //         cout << dp[i][j] << " ";
