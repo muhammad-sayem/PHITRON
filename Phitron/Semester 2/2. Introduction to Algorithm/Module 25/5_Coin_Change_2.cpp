@@ -36,16 +36,15 @@ int main()
         }
     }
 
-     for (int i = 0; i <= n; i++)
-    {
-        for (int j = 0; j <= s; j++)
-        {
-            cout << dp[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // for (int i = 0; i <= n; i++){
+    //     for (int j = 0; j <= s; j++){
+    //         cout << dp[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
-    cout << "Minimum coins needed: " << dp[n][s] << endl;
+    if(dp[n][s] == INT_MAX - 1) cout << "Not Possible" << endl;
+    else cout << "Minimum coins needed: " << dp[n][s] << endl;
     
     return 0;
 }
