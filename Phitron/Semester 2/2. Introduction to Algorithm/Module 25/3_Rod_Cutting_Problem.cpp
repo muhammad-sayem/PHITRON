@@ -23,7 +23,7 @@ int unbounded_knapsack(int n, int s, int v[], int w[]){
         return dp[n][s] = unbounded_knapsack(n-1, s, v, w);
     }
 }
-\
+
 int main()
 {
     int n, i;
@@ -44,7 +44,5 @@ int main()
 
     cout << "Maximum Profit: " << unbounded_knapsack(n, n, v, w) << endl;
 
-
-    
     return 0;
 }
