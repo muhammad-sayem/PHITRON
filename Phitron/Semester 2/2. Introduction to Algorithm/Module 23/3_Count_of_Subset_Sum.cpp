@@ -99,15 +99,15 @@ int main()
         }
     }
 
-    for(i=0; i<=n; i++){
-        for(j=0; j<=s; j++){
-            cout << dp[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // for(i=0; i<=n; i++){
+    //     for(j=0; j<=s; j++){
+    //         cout << dp[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
-    // if(dp[n][s]) cout << "YES" << endl;
-    // else cout << "NO" << endl;
+    if(dp[n][s]) cout << "YES" << endl;
+    else cout << "NO" << endl;
     
     return 0;
 }
