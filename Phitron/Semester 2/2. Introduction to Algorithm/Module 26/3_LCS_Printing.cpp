@@ -54,18 +54,16 @@ int main()
         }
 
         else{
-            if(dp[i][j-1] > dp[i-1][j]){
-                j--;
+            if(dp[i-1][j] > dp[i][j-1]){
+                i--;
             }
             else{
-                i--;
+                j--;
             }
         }
     }
-
     reverse(ans.begin(), ans.end());
     cout << ans << endl;
 
-    
     return 0;
 }
