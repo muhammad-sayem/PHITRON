@@ -55,8 +55,10 @@ int main()
             }
         }
     }
+
     reverse(ans.begin(), ans.end());
-    cout << ans << endl;
+    
+    cout << "Minimum Number of Deletion to make Palindrome: "<< a.size() - ans.size() << endl;
     
     return 0;
 }
