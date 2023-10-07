@@ -1,47 +1,40 @@
-// Print the first negative element from each subarray of size K //
+// Find the Longest Subarray (size) from an array of sum S //
 
 #include<bits/stdc++.h>
+#define  ll long long
 using namespace std;
 int main()
 {
     int n, i, j;
     cin >> n;
     int a[n+5];
- 
+
     for(i=0; i<n; i++){
         cin >> a[i];
     }
 
-    int k;
-    cin >> k;
+    int s;
+    cin >> s;
 
-    i =0 ;
-    j = 0;
-
-    queue<int> q;
+    i = 0, j = 0;
+    int sum = 0, maxx = -1;
 
     while(j<n){
-        if(a[j] < 0){
-            q.push(a[j]);
+        sum += a[j];
+
+        while(sum > s){
+            sum -= a[i];
+            i++;
         }
 
-        if(j >= k-1){
-            if(!q.empty()){
-                cout << q.front() << " ";
-            }
-            else{
-                cout << 0 << " ";
-            }
-
-            if(a[i] < 0){
-                q.pop();
-            }
-            i++;            // i always samne agabe, shudhu a[i] negative hole queue theke pop korbe //
+        if(sum == s){
+            maxx = max(maxx, j-i+1);        
+            // cout << j-i+1 << " ";
         }
-
         j++;
-
     }
+
+    cout << maxx << endl;
     
     return 0;
 }
