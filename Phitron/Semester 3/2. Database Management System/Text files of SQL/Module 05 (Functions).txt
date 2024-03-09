@@ -1,0 +1,20 @@
+-- Functions -- 
+
+USE dummydb;
+
+SELECT first_name, UPPER(first_name)
+FROM employees;
+
+SELECT COS(0);
+SELECT RADIANS(90);
+SELECT COS(RADIANS(90));
+
+SELECT PI();
+
+SELECT POW(2, 5);
+
+SELECT CEIL(4.4);
+SELECT FLOOR(4.4);
+
+SELECT GREATEST(7, 9, 8, 4, 5);
+SELECT LEAST(7, 9, 8, 4, 5);

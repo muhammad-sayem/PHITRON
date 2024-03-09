@@ -1,0 +1,36 @@
+					-------------------- Part 1 --------------------
+USE practice_module_employee;
+
+CREATE TABLE Employee(
+    ID CHAR(4) PRIMARY KEY,
+    Name VARCHAR(50),
+    Salary INT,
+    Joining_Date VARCHAR(20)
+);
+
+INSERT INTO Employee (ID, Name, Salary, Joining_Date) VALUES ('0001', 'Muammad Sayem', 20000, '19 January, 2022');
+INSERT INTO Employee (ID, Name, Salary, Joining_Date) VALUES ('0002', 'Rashed Islam', 30000, '27 September, 2021'); 
+INSERT INTO Employee (ID, Name, Salary, Joining_Date) VALUES ('0003', 'Rakib Hasan', 25000, '6 August, 2022') ;
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM Employee WHERE Name = 'Rakib Hasan';
+SET SQL_SAFE_UPDATES = 1;
+
+
+					-------------------- Part 2 --------------------
+
+
+USE practice_module_employee_2;
+
+CREATE TABLE Employee(
+    ID CHAR(4) PRIMARY KEY,
+    Name VARCHAR(50),
+    Joining_Year INT CHECK (Joining_Year >= 2000),
+    Birthday DATE CHECK (Birthday < '2000-01-01'),
+    Designation VARCHAR(20),
+    Salary INT
+);
+
+INSERT INTO Employee (ID, Name, Joining_Year, Birthday, Designation, Salary) VALUES ('0001', 'Muhammad Sajib', 2020, '1990-01-10', 'Senior SWE', 55000);
+INSERT INTO Employee (ID, Name, Joining_Year, Birthday, Designation, Salary) VALUES ('0002', 'Sajed Hasan', 2002, '1970-01-10', 'Managing Director', 130000);
+INSERT INTO Employee (ID, Name, Joining_Year, Birthday, Designation, Salary) VALUES ('0003', 'Atik Ahmed', 2018, '1993-01-10', 'Junior SWE', 35000);

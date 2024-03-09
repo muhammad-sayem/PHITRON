@@ -1,0 +1,59 @@
+USE module_3;
+
+-- Creating Student Table --
+
+CREATE TABLE Student(
+    Roll CHAR(4) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) UNIQUE,
+    Address VARCHAR(250),
+    Age INT CHECK (Age > 10)
+);
+
+INSERT INTO Student (Roll, Name, Email, Address, Age) VALUES ('0001','Muhammad Sayem', 'sayem@gmail.com', 'Dhaka Cantonment', 23);
+INSERT INTO Student (Roll, Name, Email, Address, Age) VALUES ('0002','Sakib Ahmed', 'sakib@gmail.com', 'Dhaka Cantonment', 30);
+INSERT INTO Student (Roll, Name, Email, Age) VALUES ('0003','Arif Khan', 'Arif@gmail.com', 27);
+
+--- Another way to declare Constrains ---
+
+CREATE TABLE Student(
+    Roll CHAR(4),
+    Name VARCHAR(50),
+    Email VARCHAR(50),
+    Address VARCHAR(250),
+    Age INT,
+    PRIMARY KEY(Roll),
+    UNIQUE (Email),
+    CHECK (Age>10)
+);
+
+--- Another way to declare Constrains ---
+
+CREATE TABLE Student(
+    Roll CHAR(4),
+    Name VARCHAR(50),
+    Email VARCHAR(50),
+    Address VARCHAR(250),
+    Age INT,
+    CONSTRAINT pk_rule PRIMARY KEY(Roll),
+    CONSTRAINT unique_rule UNIQUE (Email),
+    CONSTRAINT checking_rule CHECK (Age>10)
+);
+
+-- Creating Library Table --
+
+CREATE TABLE Libray(
+    BookName VARCHAR(50),
+    WhoHired_Roll CHAR(4),
+    FOREIGN KEY (WhoHired_Roll) REFERENCES Student(Roll)
+);
+
+-- Creating a Composite Primary Key --
+
+CREATE TABLE Course(
+    CourseName VARCHAR(10),
+    University VARCHAR(10),
+    Credit INT,
+    
+    PRIMARY KEY (CourseName, University)
+);

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-title{
+    font-size: 50px;
+    color: #FA725C;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container{
+    background-image: url("Images/top_banner.png");
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.half-width{
+    width:35%;
+    padding: 25px;
+}
+
+.top-right img{
+    width: 80%;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.pro-pic{
+    margin-left: 130px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+
+.head1{
+    font-size: 50px;
+}
+
+.head2{
+    font-size: 35px;
+    margin-left: 80px;
+}
+
+.para{
+    font-size: 18px;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-left: 380px;
+}
+
+.button-custom{
+    text-decoration: none;
+    background-color: #FA725C;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Second Page CSS Starts */
+
+.second-page{
+    background-image: url("Images/top_banner.png");
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-size: cover;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 60px;
+    margin-top: 30px;
+    padding: 40px;
+}
+
+.skill{
+    display: flex;
+    gap: 25px;
+}
+
+.skills i{
+    font-size: 50px;
+}
+
+.skills h3{
+    font-size: 30px;
+}
+
+/* Third Page CSS Starts */
+
+.third-page{
+    background-image: url("Images/top_banner.png");
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: 70vh;
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 70px;
+    grid-gap: 60px;
+    padding: 40px;
+}
+
+.blog{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.blog-img img{
+    width: 300px;
+    height: 150px;
+}
+
+.instructor{
+    font-size: 18px;
+}
+
+.name{
+    text-decoration: none;
+    color: #FA725C;
+    font-weight: bold;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
+.blog-desc h3{
+    margin-top: 15px;
+}
+
+.footer{
+    background-color: #FA725C;
+}
+
+.foot{
+    text-align: center;
+}

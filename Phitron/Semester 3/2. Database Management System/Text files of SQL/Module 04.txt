@@ -1,0 +1,111 @@
+Answer - 1:
+-----------
+
+CREATE TABLE Student(
+    Roll CHAR(4) PRIMARY KEY,
+    Name VARCHAR(50),
+    Email VARCHAR(30),
+    Address VARCHAR(100)
+);
+
+CREATE TABLE Library(
+    Book_Name VARCHAR(30) PRIMARY KEY,
+    Hired_Roll CHAR(4),
+    FOREIGN KEY (Hired_Roll) REFERENCES Student(Roll)
+);
+
+CREATE TABLE Fees(
+    Roll CHAR(4),
+    Fee_Amount INT,
+    FOREIGN KEY (Roll) REFERENCES Student(Roll)
+);
+
+
+Answer - 2:
+-----------
+
+USE Assignment_1;
+
+CREATE TABLE Student(
+    Roll CHAR(4) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(30) UNIQUE,
+    Address VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Library(
+    Book_Name VARCHAR(30) PRIMARY KEY,
+    Hired_Roll CHAR(4),
+    FOREIGN KEY (Hired_Roll) REFERENCES Student(Roll)
+);
+
+CREATE TABLE Fees(
+    Roll CHAR(4),
+    Fee_Amount INT NOT NULL,
+    FOREIGN KEY (Roll) REFERENCES Student(Roll)
+);
+
+
+Answer - 3:
+-----------
+
+1) Data is a collection of individual and unorgazied facts. But Information is a collection of organized facts.
+2) Sometimes data can have lacks of structues but information is always structured.
+3) Data is independent but information is depended on data.
+4) Data does not help dierctly for making decisions but information helps in decision making.
+5) Sometimes data is meaningful or not but information is always meaningful.
+
+
+Answer - 4:
+-----------
+
+In MySQL, update and delete query was not excecuting because the safe mode was on. 
+Safe mode is used for securty perpuse of datas. So, if we want to update or delete somethig from a database,
+then we have to turn off the safe mode.
+
+To enable the feature the code is given below - 
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+Answer - 5:
+-----------
+
+SELECT DISTINCT Department
+FROM Employee;
+
+Answer - 6:
+-----------
+
+SELECT LastName
+FROM Employee
+ORDER BY Age DESC;
+
+
+Answer - 7:
+-----------
+
+SELECT LastName
+FROM Employee
+WHERE Age>30 and Department = 'Marketing';
+
+Answer - 8:
+-----------
+
+SELECT *
+FROM Employee;
+
+Answer - 9:
+----------
+
+SELECT *
+FROM Employee
+WHERE FirstName LIKE '%son%' or LastName LIKE '%son%';
+
+Answer - 10:
+-----------
+
+SELECT *
+FROM Employee
+WHERE Department = 'Engineering';
+

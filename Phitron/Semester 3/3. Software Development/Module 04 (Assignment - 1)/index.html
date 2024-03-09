@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fashion Quest </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation Bar Starts -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-expand-lg">
+        <div class="container">
+            <img src="Images/Group 2.png" alt="" id="logo-image">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="menu-items">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="menu-items">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="menu-items">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="menu-items"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends -->
+
+
+    <!-- Carousel Part Starts -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img id="slide-images" src="Images/Iphone Image.png" class="d-block w-25" alt="...">
+                <div class="carousel-caption d-none d-md-block text-danger" id="slide-class">
+                    <h1 class="text-dark" id="slide-heading">IPhone <span class="fw-bold">13 Max Pro</span></h1>
+                    <p class="text-dark fs-5" id="slide-para">The display gets a 120Hz refresh rate, but there's still
+                        an unsightly notch that interferes with movies.</p>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="carousel-item active">
+                <img id="slide-images" src="Images/Iphone Image.png" class="d-block w-25" alt="...">
+                <div class="carousel-caption d-none d-md-block text-danger" id="slide-class">
+                    <h1 class="text-dark" id="slide-heading">IPhone <span class="fw-bold">14 Max Pro</span></h1>
+                    <p class="text-dark fs-5" id="slide-para">The display gets a 120Hz refresh rate, but there's still
+                        an unsightly notch that interferes with movies.</p>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="carousel-item active">
+                <img id="slide-images" src="Images/Iphone Image.png" class="d-block w-25" alt="...">
+                <div class="carousel-caption d-none d-md-block text-danger" id="slide-class">
+                    <h1 class="text-dark" id="slide-heading">IPhone <span class="fw-bold">15 Max Pro</span></h1>
+                    <p class="text-dark fs-5" id="slide-para">The display gets a 120Hz refresh rate, but there's still
+                        an unsightly notch that interferes with movies.</p>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carousel Part Ends -->
+
+    <!-- Third Part Starts -->
+    <div class="product container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="row gy-5">
+
+                    <div class="col-12 text-center d-lg-flex">
+                        <img class="img-fluid" src="Images/PlayStation.png" alt="">
+                        <div class="para">
+                            <h2>iPad 9</h2>
+                            <p class="me-4">It's still great for tablet-y things like consuming content or playing
+                                games, and Apple greatly improved the front-facing camera for video calls.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center d-lg-flex" id="third-bg">
+                        <img class="img-fluid" src="Images/head phone.png" alt="">
+                        <div class="para">
+                            <h2>Apple Airpods Max</h2>
+                            <p class="me-4">It's still great for tablet-y things like consuming content or playing
+                                games, and Apple greatly improved the front-facing camera for video calls.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 d-lg-flex text-center align-items-center" id="third-bg-2"> 
+                <div class="para">
+                    <h2>Apple Airpods Max</h2>
+                    <p class="me-4">Our most popular laptop, MacBook Air is supercharged by M1 and M2 chips. Featuring
+                        FaceTime HD camera, Touch ID, and vibrant Retina display.</p>
+                </div>
+                <img class="img-fluid w-50 h-50" src="Images/Mac Book.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Third Part Ends -->
+
+    <!-- Fourth Part Startss -->
+    <section class="pt-5" id="box-section">
+        <div class="container">
+            <h4>Browse in Category</h4>
+        </div>
+
+        <div class="container row m-auto">
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Phone.png" alt="">
+            </div>
+
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Smart Watches.png" alt="">
+            </div>
+
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Cameras.png" alt="">
+            </div>
+
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Headphones.png" alt="">
+            </div>
+
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Computers.png" alt="">
+            </div>
+
+            <div class="col-lg-2 col-6" id="boxes">
+                <img src="Images/Gaming.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Fourth Part Ends -->
+
+
+    <!-- Cards Part Starts -->
+    <div class="cards-head d-flex pt-5 container">
+        <h6>New Arrival</h6>
+        <h6>Bestseller</h6>
+        <h6>Featured Products</h6>
+    </div>
+
+    <section class="cards-parent">
+        <div class="container d-lg-flex justify-content-between" id="card-card">
+
+            <div class="card text-center" style="width: 18rem;">
+                <img src="Images/IPhone.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+                    <h5 class="card-title fw-bold fs-3">$900</h5>
+                    <a href="#" class="btn btn-dark px-5">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card text-center" style="width: 18rem;">
+                <img src="Images/Camera.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Blackmagic Pocket Cinema Camera</p>
+                    <h5 class="card-title fw-bold fs-3">$2035</h5>
+                    <a href="#" class="btn btn-dark px-5">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card text-center" style="width: 18rem;">
+                <img src="Images/Apple Watch.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Apple Watch Series 9 GPS 41mm Starlight Aluminium Case</p>
+                    <h5 class="card-title fw-bold fs-3">$399</h5>
+                    <a href="#" class="btn btn-dark px-5">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card text-center" style="width: 18rem;">
+                <img src="Images/Apple Headphone.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">AirPods Max Silver</p>
+                    <h5 class="card-title fw-bold fs-3">$549</h5>
+                    <a href="#" class="btn btn-dark px-5">Buy Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Cards Part Ends -->
+
+    <!-- Sale Part Strats -->
+    <section class="sale-parent mt-5">
+        <div class="section-parent d-lg-flex justify-content-between">
+
+            <div class="sec">
+                <img src="Images/Screen.png" alt="">
+            </div>
+
+            <div class="sec">
+                <img class="" src="Images/11.11 Sale.png" alt="" id="sale-11-11">
+                <p class="text-center fs-5">Get some special offer for 11th November. <br>To get updates about this
+                    offer stay tuned with us</p>
+            </div>
+
+            <div class="sec">
+                <img src="Images/Screen 2.png" alt="" id="screen-2">
+
+            </div>
+        </div>
+    </section>
+    <!-- Sale Part Ends -->
+
+    <!-- Footer Part Strats -->
+    <footer class="bg-dark text-light" id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12">
+                    <img src="Images/Group 2.png" alt="" id="footer-image">
+                </div>
+
+                <div class="col-lg-3 col-sm-12">
+                    <div class="icons" id="footer-menu-1">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 text-center" id="footer-menu-1">
+                    <h6 class="text-center mt-4 text-center fw-bold">Services</h6>
+                    <li class="list-group-item fs-6"> Bonus Programms </li>
+                    <li class="list-group-item fs-6"> Gift Cards </li>
+                    <li class="list-group-item fs-6"> Credit and Payment </li>
+                    <li class="list-group-item fs-6"> Service Contracts </li>
+                    <li class="list-group-item fs-6"> Non-cash Account </li>
+                    <li class="list-group-item fs-6"> Payment </li>
+                </div>
+                
+                <div class="col-lg-3 col-sm-12 text-center" id="footer-menu-2">
+                    <h6 class="text-center mt-4 text-center fw-bold">Assistance to the Buyers</h6>
+                    <li class="list-group-item fs-6"> Find an Order </li>
+                    <li class="list-group-item fs-6"> Terms of Delivary </li>
+                    <li class="list-group-item fs-6"> Exchange and Return of Goods </li>
+                    <li class="list-group-item fs-6"> Guarranty </li>
+                    <li class="list-group-item fs-6"> Frequently Asked Questions </li>
+                    <li class="list-group-item fs-6"> Terms of Use of the site </li>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Part Ends -->
+
+    <!-- JavaScript Files Connection -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
