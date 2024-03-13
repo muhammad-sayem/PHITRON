@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> This is PRACTICE APP PAGE </h1>
+
+    <h2> Student Name: {{name}} </h2>
+    <h2> student ID: {{id}} </h2>
+
+    <!-- For Loop -->
+    {% for i in lst %}
+        <h4> {{i}} </h4>
+    {% endfor %}
+
+    <!-- Django Template Filters -->
+
+    <h1> {{30 | add:"5"}} </h1>         <!-- 35 -->
+    <h1> {{'bangladesh' | capfirst}} </h1>      <!-- Bangladesh -->
+    <h1>{{"January - February - March" | cut:"-"}}</h1>     <!-- January February March -->
+    <h3> {{books | dictsort:"book_name"}} </h3>
+    <h3> {{books | dictsort:"author"}} </h3> 
+    <h3> {{books | dictsort:"book_id"}} </h3>
+
+    <!-- {% for i in books %}
+        <h4>{{i.book_id}} {{i.book_name}} {{i.author}}</h4>
+    {% endfor %} -->
+
+
+    <h1> {{lst | first}} </h1>  
+    <h1> {{lst | last}} </h1>  
+    <h1> List length: {{lst | length}} </h1>  
+    <h2> List elements: {{lst | linenumbers}} </h2>  
+
+    <h2>{{'Django rest framework' | title}}</h2>
+    <h2>{{ lst | random }}</h2>
+    <h2>{{ 'Python Is Joss' | lower }}</h2>
+    <h2>{{ lst | slice:":2" }}</h2>
+    <h2>{{ 'Cloud computing' | truncatechars:6 }}</h2>
+
+
+</body>
+</html>
