@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page from First App</h1>
+
+    <h2>Author: {{author}} </h2>
+    <h2>Age: {{age}} </h2>
+    <h2>List: {{lst}} </h2>
+
+    <!-- Conditional Statement -->
+
+    {% if age >= 20 %}
+        <h4> You will GET driving license </h4>
+    {% elif age >= 10 and age <= 19 %}
+        <h4> You will NOT GET driving license </h4>
+    {% else %}
+        <h4> You are a CHILD </h4>
+    {% endif %}
+
+    <!-- For Loop -->
+
+    {% for i in courses %}
+        <h3>{{i.id}} {{i.name}} {{i.fee}}</h3>
+    {% endfor %}
+
+
+    <!-- Django Template Filtering -->
+    
+    <h2>{{lst}}</h2> 
+    <h1> {{ lst | join:" - " }} </h1>               <!-- Syntax: {{ value | join:" - " }} -->
+    <h1> {{ birthday | date:"D d M Y" }} </h1>      <!-- Syntax: {{ value | date:"D d M Y" }} -->  
+    <h2> {{"Python is Fun" | cut:" "}} </h2>
+    <h1> {{'Happy coding, python is fun' | truncatechars: 6}} </h1>
+    <h1> {{'Happy coding, python is fun' | truncatewords: 2}} </h1>
+
+    
+</body>
+</html>
