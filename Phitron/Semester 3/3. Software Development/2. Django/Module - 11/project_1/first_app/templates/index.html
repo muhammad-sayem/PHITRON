@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{{block.super}}
+
+<h2> {{id.product_name}} </h2>
+
+<!-- Table Starts -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"> User ID </th>
+            <th scope="col"> ID </th>
+            <th scope="col"> Title </th>
+            <th scope="col"> Body </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <th scope="row">{{i.userId}}</th>
+            <td>{{i.id}}</td>
+            <td>{{i.body}}</td>
+            <td>{{i.title}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- Table Ends -->
+
+<h1> I am inside FIRST APP </h1>
+<img src="{% static 'images/bird2.jpg' %}" alt="Bird 2 Image">
+
+{% endblock %}
