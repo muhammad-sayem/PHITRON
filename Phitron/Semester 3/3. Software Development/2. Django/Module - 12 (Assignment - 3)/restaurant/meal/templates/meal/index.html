@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>Meal</h1>
+
+<div class="row container m-auto">
+
+    {% for item in categories %}
+
+    <div class="col-lg-4 mt-5 text-center px-5">
+        <div class="card bg-warning" style="width: 18rem;">
+            <img src="{{item.strCategoryThumb}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Meal ID: {{item.idCategory}}</h5>
+                <h2 class="card-title text-danger fw-bold">{{item.strCategory}}</h2>
+                <p class="card-text">{{item.strCategoryDescription | truncatewords:10}}</p>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<!-- <h1>Meal</h1> -->
+
 {% endblock content %}

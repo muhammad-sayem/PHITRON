@@ -1,5 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>About Us</h1>
+<h1 class="text-center mt-5 fw-bold">About our <br><span class="text-danger fw-bold">Django Restaurant</span></h1>
+<p class="container mt-5">Welcome to Our Story at Django Restaurant. Here, we invite you to delve into the essence of who we are and what drives
+    us. Our journey began with a simple idea, fueled by a passion for healthy foods.
+    From those early days, we've grown into a dedicated team of individuals, each bringing unique skills and
+    perspectives to the table.
+
+    At the heart of everything we do lies a deep commitment to our values. Transparency, integrity, and innovation are
+    the cornerstones of our approach, guiding every decision we make and every interaction we have. We believe in
+    putting our customers first, striving to exceed expectations and deliver unparalleled experiences.
+
+    Our story is one of evolution and growth, marked by milestones, challenges, and triumphs. Through it all, we've
+    remained steadfast in our pursuit of excellence, continuously pushing the boundaries of what's possible. Along the
+    way, we've cultivated meaningful relationships with our community, actively engaging with and giving back to those
+    who support us.
+
+    As you explore our "About Us" page, you'll discover more than just a company overview. You'll uncover the passion
+    and dedication that drive us forward, the values that guide us, and the vision that propels us toward a brighter
+    future. Whether you're a customer, partner, or simply curious about who we are, we invite you to join us on this
+    journey as we strive to make a difference and leave a lasting impact on the world.</p>
+<img src="{% static 'images/background.jpg' %}" class="rounded mx-auto d-block mt-5" alt="...">
+
+
+<footer class="bg-dark text-center text-lg-start mt-5">
+    <!-- Copyright -->
+    <div class="text-center p-3 text-danger fw-bold" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <p class="text-danger fw-bold">Md Shahrul Islam Sayem</p>
+      <p class="text-danger fw-bold">Phone: 017XXXXXXXX </p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
 {% endblock content %}

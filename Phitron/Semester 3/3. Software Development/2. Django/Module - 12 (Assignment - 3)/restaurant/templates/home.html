@@ -3,9 +3,20 @@
 {% load static %}
 
 {% block content %}
+<div class="container mt-5">
     <div class="row">
+        <div class="col-lg-6 d-flex align-items-center">
+            <div class="card m-auto" style="width: 45rem;">
+                <div class="card-body p-5 bg-warning">
+                    <h5 class="card-title text-center text-danger fs-2 fw-bold"> Welcome to Django Restaurant </h5>
+                    <p class="card-text text-dark">At Django Restaurant, we're all about tasty food and friendly vibes. Our menu features fresh, local ingredients cooked with love. From juicy burgers to mouthwatering salads, there's something for everyone. Sit back, relax, and let our welcoming staff take care of you. Come hungry, leave happy!</p>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-6">
-            
+            <img src="{% static 'restaurant.jpg' %}" class="img-fluid" alt="">
         </div>
     </div>
+</div>
+
 {% endblock content %}
