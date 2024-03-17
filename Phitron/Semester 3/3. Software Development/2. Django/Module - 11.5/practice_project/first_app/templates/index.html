@@ -2,11 +2,13 @@
 
 {% block content %}
 
+<h1 class="text-center text-danger pt-5">OUR MENU</h1>
+
 <div class="row container m-auto">
 
 {% for i in meals %}
 
-<div class="col-lg-3">
+<div class="col-lg-3 mt-5">
     <div class="card" style="width: 18rem;">
         <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
         <div class="card-body">
