@@ -19,7 +19,7 @@ class contactForm(forms.Form):
     pizza = forms.MultipleChoiceField(choices = MEAL, widget = forms.CheckboxSelectMultiple)
 
 
-# -----------------> Form Validators (Builtin) <------------------ #
+# -----------------> Form Validators (Without Builtin) <------------------ #
 
 # class StudentData(forms.Form):
 #     name = forms.CharField(widget = forms.Textarea)
