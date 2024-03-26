@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center text-danger fw-bold mt-3 mb-3"> This is Student Model Page </h1>
+
+{% if data %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="bg-warning text-dark" scope="col"> Roll </th>
+            <th class="bg-warning text-dark" scope="col"> Name </th>
+            <th class="bg-warning text-dark" scope="col"> Email </th>
+            <th class="bg-warning text-dark" scope="col"> Father's Name </th>
+            <th class="bg-warning text-dark" scope="col"> Address </th>
+            <th class="bg-warning text-dark" scope="col"> Boolean </th>
+            <th class="bg-warning text-dark" scope="col"> Date Field </th>
+            <th class="bg-warning text-dark" scope="col"> Date Time Field </th>
+            <th class="bg-warning text-dark" scope="col"> Binary Field </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for std in data %}
+
+        <tr>
+            <td class="bg-dark fw-bold text-warning"> {{std.roll}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.name}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.email}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.father_name}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.address}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.boolean_field}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.date_field}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.date_time_field}} </td>
+            <td class="bg-dark fw-bold text-warning"> {{std.binary_field}} </td>
+        </tr>
+
+        {% endfor %}
+        
+    </tbody>
+</table>
+
+{% endif %}
+
+{% endblock content %}
