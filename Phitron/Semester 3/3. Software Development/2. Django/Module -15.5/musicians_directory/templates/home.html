@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-success text-center fw-bold mt-4 mb-4"> Welcome to Music Directory </h1>
+
+{% if data %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="bg-dark text-warning"> Album ID </th>
+            <th class="bg-dark text-warning"> Musician Name </th>
+            <th class="bg-dark text-warning"> Email </th>
+            <th class="bg-dark text-warning"> Album Rating </th>
+            <th class="bg-dark text-warning"> Instrument Type </th>
+            <th class="bg-dark text-warning"> Album Name </th>
+            <th class="bg-dark text-warning"> Release Date </th>
+            <th class="bg-dark text-warning"> Actions </th>
+        </tr>
+    </thead>
+
+    {% for info in data %}
+    <tbody>
+
+            <td class="bg-warning text-dark fw-bold"> {{info.id}} </td>
+            <td class="bg-warning fw-bold"> <a href="{% url 'edit_musician' info.album_musician.id %}" style="text-decoration:none" class="text-danger fw-bold fs-6"> {{info.album_musician.first_name}} {{info.album_musician.last_name}} </a> </td>
+            <td class="bg-warning text-dark fw-bold"> {{info.album_musician.email}} </td>
+            <td class="bg-warning text-dark fw-bold"> {{info.rating}} </td>
+            <td class="bg-warning text-dark fw-bold"> {{info.album_musician.instrument_type}} </td>
+            <td class="bg-warning text-dark fw-bold"> {{info.album_name}} </td>
+            <td class="bg-warning text-dark fw-bold"> {{info.release_date}} </td>
+            <td class="bg-warning text-dark fw-bold"> 
+                <a href="{% url 'edit_album' info.id %}"> <button class="btn btn-primary"> Edit </button> </a> 
+                <a href="{% url 'delete_album' info.id %}"> <button class="btn btn-danger"> Delete </button> </a> 
+            </td>
+    </tbody>
+    {% endfor %}
+
+</table>
+
+
+{% endif %}
+
+{% endblock content %}
