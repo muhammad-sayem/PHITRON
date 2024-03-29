@@ -2,6 +2,46 @@
 
 {% block content %}
 
-    <h1> Show Tasks Page </h1>
+<h1 class="text-warning text-center fw-bold mt-3 bg-dark"> All Tasks </h1>
+
+<div class="row container m-auto">
+    {% for info in data %}
+    <div class="col-lg-4">
+        <div class="card mt-3" style="width: 25rem;">
+            <div class="card-body bg-dark">
+                <h5 class="card-title text-center"> {{info.id}} </h5>
+                <h3 class="card-subtitle mb-2 text-center fw-bold text-warning"> {{info.task_title}} </h3>
+                <p class="card-subtitle mb-2 text-warning fw-bold text-center"> Published: {{info.task_date}} </p>
+                <p class="card-text text-center text-warning"> {{info.task_description | truncatewords:15}} </p>
+                
+                {% for cat in info.category.all %}
+                    <button class="btn btn-warning mb-3 mt-2 text-dark fw-bold"> {{cat.category_name}} </button>
+                {% endfor %}
+
+                <!-- <h1> {{info.task_title}} </h1>
+                <h1> {{info.is_completed}} </h1> -->
+
+                {% if info.is_completed %}
+                    <h2 class="text-center text-success fw-bold mt-4 mb-4 text-warning">Completed</h2>
+                {% else %}
+                    <div class="container">
+                        <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="{% url 'edit_task' info.id %}" class="btn btn-primary"> Edit </a>
+                            <a href="{% url 'delete_task' info.id %}" class="btn btn-danger"> Delete </a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 
 {% endblock content %}
+
+
