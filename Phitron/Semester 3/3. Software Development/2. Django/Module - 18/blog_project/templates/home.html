@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="d-flex flex-wrap container align-items-center mt-5">
+    <div class="col-6">
+        <h2> Welcome to Django Blog </h2>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente tenetur possimus eaque autem est corporis necessitatibus harum perferendis vero accusamus soluta earum iste eos, officiis, quam, fugit magnam optio commodi vel corrupti tempore magni modi deserunt. Voluptatum odit neque aut eius aliquam saepe fugit vero, tempore officia ex? Nobis natus labore fugiat, accusantium mollitia, ratione inventore eos dignissimos dolore facere voluptates voluptas praesentium ipsam. Rerum eveniet pariatur vel aperiam tempora incidunt aspernatur totam hic dolore ratione numquam a veritatis iusto, sequi obcaecati, consectetur perspiciatis explicabo. Temporibus iure, ducimus aspernatur fuga porro eveniet voluptate quia est? Dolores natus vel numquam enim! </p>
+    </div>
+
+    <div class="col-6">
+        <img src="{% static 'homepage.jpg' %}" alt="">
+    </div>
+</div>
+
+
+<div class="d-flex flex-wrap p-5">
+
+    <div class="col-2 bg-white p-4">
+        <h4 class="fw-bold text-danger mb-3"> All Categories </h4>
+        {% for cat in category %}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="categories" id={{cat.id}}>
+                <label class="form-check-label" for={{cat.id}}>
+                    <a href="{% url 'category_wise_post' cat.slug %}" class="text-decoration-none text-danger">{{cat.name}}</a>
+                </label>
+            </div>
+        {% endfor %}
+        
+    </div>
+
+    <div class="col-10 p-3">
+        <h3> {{data | length}} results found </h3>
+        <div class="d-flex flex-wrap pt-5">
+
+            {% for post in data %}
+            <div class="col-lg-3 mb-3 mb-sm-0">
+                <div class="card mx-2">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{post.title}} </h5>
+                        <p class="card-text"> {{post.content | truncatewords:12}} </p>
+                        <p class="fw-bold"> Author: <span class="bg-warning p-1"> {{post.author.first_name}}
+                                {{post.author.last_name}} </span></p>
+                        <p> Categories:
+                            {% for cat in post.category.all %}
+                            <button class="btn btn-success mb-1 btn-sm" disabled> {{cat.name}} </button>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
