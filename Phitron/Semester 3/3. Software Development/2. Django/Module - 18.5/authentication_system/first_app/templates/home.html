@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% if messages %}
+    {% for m in messages %}
+        <h3 {% if m.tags%} class="{{m.tags}}" {% endif %}> {{m}} </h3>
+    {% endfor  %}
+{% endif  %}
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <h1 class="bg-success p-5 border border-5 border-dark fw-bold">This is Home Page</h1>
+</div>
+
+{% endblock content %}

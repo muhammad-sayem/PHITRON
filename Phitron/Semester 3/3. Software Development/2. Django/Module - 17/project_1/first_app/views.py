@@ -38,6 +38,7 @@ def user_login(request):
                 user = authenticate(username = name, password = userpass)   # Check kora hocche user database e ache kina
 
                 if user is not None:
+                    messages.success(request, 'Logged in successfully!!')
                     login(request, user)
                     return redirect('profile')
         else:
