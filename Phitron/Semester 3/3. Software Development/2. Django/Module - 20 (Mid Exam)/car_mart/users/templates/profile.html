@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="text-center mt-4 mb-4"> Profile of: <span class="text-danger fw-bold"> {{user.first_name}} {{user.last_name}}
+    </span> </h1>
+
+<div class="text-center">
+    <a href="{% url 'edit_profile' %}" class="btn btn-warning fs-3 mt-3 fw-bold">Edit Profile</a>
+</div>
+
+{% if car %}
+<div class="card mt-5 m-auto text-center" style="width: 45rem;">
+    <img src="{{car.image.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h3 class="card-title"> Car Name: <span class="text-danger"> {{car.car_name}} </span> </h3>
+        <h3 class="card-title"> Car Price: <span class="text-danger"> {{car.price}} </span> </h3>
+        <h3 class="card-title"> Car Brand Name: <span class="text-danger"> {{car.brand.brand_name}} </span> </h3>
+        <p class="card-text fs-5"> {{car.description}} </p>
+        <a href="{% url 'car_details' car.id %}" class="btn btn-warning px-4 py-2 boder border-dark border-3"> View Details </a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

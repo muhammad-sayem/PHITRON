@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1 class="text-center fw-bold mt-4 mb-4"> Details of <br> <span class="text-danger fw-bold">{{car.car_name}} </span>
+</h1>
+<div class="row align-items-center justify-content-center">
+    <div class="col-md-5 d-flex justify-content-center align-items-center">
+        <img src="{{car.image.url}}" class="card-img-top" alt="Car Image" style="max-width: 100%;">
+    </div>
+
+    <div class="col-md-5 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1> Car Model: <span class="text-danger fw-bold">{{car.car_name}}</span> </h1>
+            <h2> Price: <span class="text-danger fw-bold">{{car.price}}</span> </h2>
+            <h2> Brand: <span class="text-danger fw-bold">{{car.brand.brand_name}}</span> </h2>
+            <p> {{car.description}} </p>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'buy_now' car.id %}" class="btn btn-warning border border-dark border-3 px-4">Buy Now</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<div class="card m-auto mt-5 container">
+    <h4 class="p-3 fw-bold"> <b class="text-danger">Total Comments :</b> {{comments | length}}</h4>
+    {% for comment in comments %}
+    <div class="card-body border m-2">
+        <p><b>{{comment.name}}</b> {{comment.created_on}}</p>
+        <p>{{comment.body}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<h1 class="text-center text-danger fw-bold mt-5 mb-4"> Add Your Comment </h1>
+
+<form method="post" style="width: 85%; margin: auto;">
+    {% csrf_token %}
+    {{comment_form | crispy}}
+    <button type="submit" class="btn btn-warning border border-dark border-3 mb-3 mt-2 px-4 py-2"> Submit </button>
+</form>
+
+
+{% endblock content %}
+
+
+<!-- <img src="{{car.image.url}}" class="card-img-top" alt="Car Image">-->
+
+<!-- <div class="card" style="width: 40rem;">
+    <div class="card-body text-center">
+        <h2 class="card-title">{{car.car_name}}</h2>
+        <h4 class="card-title">Price: {{car.price}}</h4>
+        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, velit, quis,
+            voluptas blanditiis illo temporibus in suscipit nam molestiae recusandae soluta officiis
+            pariatur. Dolores, impedit ea! Adipisci enim minima nihil magnam excepturi quas asperiores
+            repellendus iusto, quibusdam, soluta voluptate vitae?</p>
+        <h4 class="card-title">Brand: {{car.brand.brand_name}}</h4>
+
+        {% if request.user.is_authenticated %}
+        <a href="#" class="btn btn-primary">Buy Now</a>
+        {% endif %}
+    </div>
+</div> -->
