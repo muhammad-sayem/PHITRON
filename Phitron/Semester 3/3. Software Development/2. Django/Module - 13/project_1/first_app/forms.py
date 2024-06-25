@@ -60,7 +60,7 @@ def len_check(val):
         raise forms.ValidationError("Enter a text with at least 10 characters")
 
 class StudentData(forms.Form):
-    name = forms.CharField(validators = [validators.MinLengthValidator(10,  message = "Enter a name with at least 10 characters")])
+    name = forms.CharField(validators = [validators.MinLengthValidator(10,  message = "Enter a name with at least 10 characters")], label = 'Full Name', help_text = 'Total length must be within 50 characters')
     text = forms.CharField(widget = forms.TextInput, validators = [len_check])
     email = forms.CharField(widget = forms.EmailInput, validators = [validators.EmailValidator(message = "Enter a valid email address")])
     age = forms.IntegerField(validators = [validators.MinValueValidator(24, message = "Age must be at least 24"), validators.MaxValueValidator(34, message = "Age must be maximum 34")])
